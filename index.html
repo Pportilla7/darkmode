@@ -6,18 +6,22 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="css/styles.css">
-    <script src='main.js'></script>
+    <script src='js/script.js'></script>
 </head>
 <body>
     <header>
         <h2>Bangkok</h2>
-        <label class="toggle-label">
-            Dark mode
-            <input type="checkbox" id="toggle-switch">
-          </label>
+        <div class="toggle-light">
+            <p>Dark mode</p>
+            <div class="toggle-switch" onclick="toggleDarkMode()">
+                <input type="checkbox">
+                <div class="slider"></div>
+            </div>
+            
+        </div>
     </header>
-    <div class="cuerpo_central">
-        <img src="/darkmode/assets/img/grand-palace.jpg" alt="">
+    <div class="cuerpo-central-light" id="content">
+        <img src="assets/img/grand-palace.jpg">
         <h1>Chinatown - Bangkok</h1>
         <p>Aqui iria el parrafo</p>
     </div>

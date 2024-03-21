@@ -6,13 +6,128 @@ header{
     align-items: center;
 }
 
-.cuerpo_central{
+.cuerpo-central-light{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.5s ease;
 }
 
-.cuerpo_central img{
+.cuerpo-central-light img{
     width: 99%;
 }
+
+.toggle-light {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode h2{
+    color: yellow;
+}
+.dark-mode p{
+    color: white;
+}
+
+.cuerpo-central-dark {
+    background-color: #333;
+    color: yellow;
+}
+
+
+.toggle-night {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+ 
+.toggle-night>div{
+    background-color: grey;
+    height: 40px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.toggle-night>div>img{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    background-color: yellow;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+/* Estilos básicos para el toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilos para la barra del toggle */
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Estilos para el botón del toggle */
+.toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Cambio de color cuando el toggle está activado */
+.toggle-switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.toggle-switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* Deslizamiento del botón cuando el toggle está activado */
+.toggle-switch input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
 
